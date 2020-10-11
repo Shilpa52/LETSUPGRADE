@@ -1,0 +1,49 @@
+package Letsupgrade;
+import java.util.Scanner;
+public class Assignment2a {
+public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER FIRST SUBJECT MARKS");
+		int a=sc.nextInt();
+		System.out.println("ENTER SECOND SUBJECT MARKS");
+		int b=sc.nextInt();
+		System.out.println("ENTER THIRD SUBJECT MARKS");
+		int c=sc.nextInt();
+		System.out.println("ENTER FOURTH SUBJECT MARKS");
+		int d=sc.nextInt();
+		System.out.println("ENTER FIFTH SUBJECT MARKS");
+		int e=sc.nextInt();
+		int total=a+b+c+d+e;
+		double per=(total*100)/500;
+		System.out.println("PERCENTAGE:"+per);
+		if(per>90)
+		{
+			System.out.println("GRADE: A+");
+		}
+		else if(per>=80 && per<=90)
+		{
+			System.out.println("GRADE: A");
+		}
+		else if(per>=70 && per<80)
+		{
+			System.out.println("GRADE: B+");
+		}
+	  else if(per>=60 && per<70)
+		{
+			System.out.println("GRADE: B");
+		}
+		else if(per>=50 && per<=60)
+		{
+			System.out.println("GRADE: C+");
+		}
+		else if(per>=40 && per<=50)
+		{
+			System.out.println("GRADE: C");
+		}	
+	
+		else 
+		{
+			System.out.println("GRADE: FAIL");
+		}
+}
+}
