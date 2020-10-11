@@ -1,0 +1,53 @@
+package Letsupgrade;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+public class Assignment2b {
+   public static void main(String[] args) {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("ENTER THE EMPLOYEE NAME");
+		 String name=sc.nextLine();
+         System.out.println("ENTER DATE OF BIRTH");
+         int date=sc.nextInt();
+         System.out.println("ENTER MONTH OF BIRTH");
+         int month=sc.nextInt();
+         System.out.println("ENTER YEAR OF BIRTH");
+         int year=sc.nextInt();
+         System.out.println("ENTER MONTHLY SALARY");
+         int sal=sc.nextInt();
+         int annualsal=sal*12;
+         System.out.println("EMPLOYEE NAME:"+name);
+         LocalDate today=LocalDate.now();
+         LocalDate birthDate=LocalDate.of(year, month, date);
+         int age=Period.between(birthDate,today).getYears();
+         System.out.println("AGE:"+age);
+         System.out.println("ANNUAL SALARY:"+annualsal);
+         
+         
+         if(annualsal>500000)
+         {
+        	 System.out.println("PAY 20% TAX");
+        	 System.out.println("TAX AMOUNT:"+ 0.2*annualsal);
+         }
+         else if(annualsal>400000)
+         {
+        	 System.out.println("PAY 15% TAX");
+        	 System.out.println("TAX AMOUNT:"+0.15*annualsal);
+         }
+         else if(annualsal>300000)
+         {
+        	 System.out.println("PAY 10% TAX");
+        	 System.out.println("TAX AMOUNT:"+0.1*annualsal);
+         }
+         else if(annualsal>200000)
+         {
+        	 System.out.println("PAY 5% TAX");
+        	 System.out.println("TAX AMOUNT:"+0.05*annualsal);
+         }
+         else if(annualsal<200000)
+         {
+        	 System.out.println("NO TAX AT ALL");
+         }
+        sc.close();
+	}
+}
